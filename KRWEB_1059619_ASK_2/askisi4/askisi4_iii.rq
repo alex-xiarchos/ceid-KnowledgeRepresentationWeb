@@ -1,0 +1,10 @@
+PREFIX uni:<http://www.mydomain.org/uni-ns#>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?x ?name ?depart
+WHERE {   
+    ?x       rdf:type/rdfs:subClassOf* uni:Person;
+                    uni:has_name ?name;
+                    uni:member_of/uni:resource ?depart
+}

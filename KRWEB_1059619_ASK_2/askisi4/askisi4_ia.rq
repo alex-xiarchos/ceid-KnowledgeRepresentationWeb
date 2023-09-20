@@ -1,0 +1,8 @@
+PREFIX uni:<http://www.mydomain.org/uni-ns#>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?phone
+WHERE {
+    ?prof rdf:type uni:Professor .
+    ?prof uni:has_phone ?phone
+}

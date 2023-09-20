@@ -1,0 +1,17 @@
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:phrase="http://www.mydomain.org/ask2-ns#">
+		
+    <rdf:Statement rdf:about="http://www.mydomain.org/ask2-ns#StatementAboutCEID">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement" />
+        <rdf:subject rdf:resource="http://www.mydomain.org/ask2-ns#CEID"/>
+        <rdf:predicate rdf:resource="http://www.mydomain.org/ask2-ns#location"/>
+        <rdf:object>Rio</rdf:object>
+    </rdf:Statement>
+
+    <rdf:Description rdf:about="Google">
+        <phrase:says rdf:resource="http://www.mydomain.org/ask2-ns#StatementAboutCEID"/>
+    </rdf:Description>
+
+</rdf:RDF>

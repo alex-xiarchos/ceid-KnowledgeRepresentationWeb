@@ -1,0 +1,23 @@
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:phrase="http://www.mydomain.org/ask1-ns#">
+		
+	<rdf:Description rdf:about="http://www.mydomain.org/ask1-ns/Literature001">
+		<rdf:type rdf:resource="phrase:Poem"/>
+		<phrase:title>Iliada</phrase:title>
+        <phrase:author rdf:resource="http://www.mydomain.org/ask1-ns/Person001"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.mydomain.org/ask1-ns/Person001">
+		<rdf:type rdf:resource="phrase:Poet"/>
+		<phrase:livedInCentury>8</phrase:livedInCentury>
+		<phrase:location rdf:resource="http://www.mydomain.org/ask1-ns/Location001"/>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://www.mydomain.org/ask1-ns/Location001">
+		<phrase:name>Ionia</phrase:name>
+		<phrase:generalLocation>Mikra Asia</phrase:generalLocation>
+	</rdf:Description>
+
+</rdf:RDF>

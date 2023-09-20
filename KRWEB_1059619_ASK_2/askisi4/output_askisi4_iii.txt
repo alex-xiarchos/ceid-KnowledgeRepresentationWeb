@@ -1,0 +1,34 @@
+---------------------------------------------------------------------------------------------------
+| x                | name                        | depart                                         |
+===================================================================================================
+| uni:Student001   | "Student One"               | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Professor008 | "Andreas Komninos"          | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Student002   | "Student Two"               | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Student006   | "Student Six"               | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Student008   | "Student Eight"             | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Professor003 | "Haris Vergos"              | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Student016   | "Student Sixteen"           | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Student018   | "Student Eighteen"          | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Student012   | "Student Twelve"            | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Student020   | "Student Twenty"            | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Professor002 | "Nikolos Dimitris"          | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Professor009 | "Stavros Kosmadakis"        | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Student009   | "Student Nine"              | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Professor010 | "Konstantinos Mpermperidis" | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Student015   | "Student Fiveteen"          | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Professor007 | "Christos Zaroliagis"       | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Student011   | "Student Eleven"            | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Professor006 | "Ioannis Garofalakis"       | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Professor001 | "Makris Christos"           | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Student003   | "Student Three"             | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Professor004 | "Kyriakos Vlachos"          | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Student004   | "Student Four"              | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Student017   | "Student Seventeen"         | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Student019   | "Student Nineteen"          | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Student014   | "Student Fourteen"          | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Student013   | "Student Thirteen"          | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Student010   | "Student Ten"               | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Professor005 | "Efstratios Galopoulos"     | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Student005   | "Student Five"              | "http://www.mydomain.org/uni-ns#Department001" |
+| uni:Student007   | "Student Seven"             | "http://www.mydomain.org/uni-ns#Department001" |
+---------------------------------------------------------------------------------------------------

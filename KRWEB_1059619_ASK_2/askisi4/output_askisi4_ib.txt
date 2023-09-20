@@ -1,0 +1,14 @@
+----------------------------------------------
+| prof_name                   | prof_phone   |
+==============================================
+| "Konstantinos Mpermperidis" | "2610996975" |
+| "Nikolos Dimitris"          | "2610996929" |
+| "Makris Christos"           | "2610996968" |
+| "Ioannis Garofalakis"       | "2610996909" |
+| "Andreas Komninos"          | "2610996915" |
+| "Kyriakos Vlachos"          | "2610996990" |
+| "Stavros Kosmadakis"        | "2610997505" |
+| "Efstratios Galopoulos"     | "2610996911" |
+| "Christos Zaroliagis"       | "2610996912" |
+| "Haris Vergos"              | "2610996924" |
+----------------------------------------------

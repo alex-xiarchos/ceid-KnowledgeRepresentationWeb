@@ -1,0 +1,11 @@
+PREFIX uni:<http://www.mydomain.org/uni-ns#>
+Prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?stud_name ?stud_phone
+WHERE {
+    ?stud_inst  rdf:type uni:Student ;
+                uni:has_name ?stud_name   ;
+                uni:has_phone ?stud_phone   ;
+                uni:has_age ?stud_age
+                FILTER (?stud_age>"23")
+}

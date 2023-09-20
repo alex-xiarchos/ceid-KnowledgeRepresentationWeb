@@ -1,0 +1,646 @@
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:uni="http://www.mydomain.org/uni-ns#">
+
+    <!-- =================== CLASSES ================== -->
+    
+    <!-- PERSON Class -->
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Person">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class" />
+    </rdf:Description>
+    
+    <!-- STUDENT Class -->
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Student">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class" />
+        <rdfs:subClassOf rdf:resource="http://www.mydomain.org/uni-ns#Person"/>
+    </rdf:Description>
+
+    <!-- PROFESSOR Class -->
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Professor">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class" />
+        <rdfs:subClassOf rdf:resource="http://www.mydomain.org/uni-ns#Person"/>
+    </rdf:Description>
+
+    <!-- DEPARTMENT Class -->
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Department">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class" />
+    </rdf:Description>
+
+    <!-- LESSON Class -->
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Lesson">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class" />
+    </rdf:Description>
+
+    <!-- CLASSROOM Class -->
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Classroom">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class" />
+    </rdf:Description>
+
+    
+    <!-- =================== PROPERTIES ================== -->
+
+    <!-- has_name Property -->
+    <rdf:Property rdf:about="http://www.mydomain.org/uni-ns#has_name">
+        <rdfs:domain rdf:resource="http://www.mydomain.org/uni-ns#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema/Literal"/>
+    </rdf:Property>
+
+    <!-- has_phone Property -->
+    <rdf:Property rdf:about="http://www.mydomain.org/uni-ns#has_phone">
+        <rdfs:domain rdf:resource="http://www.mydomain.org/uni-ns#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema/Literal"/>
+    </rdf:Property>
+
+    <!-- has_email Property -->
+    <rdf:Property rdf:about="http://www.mydomain.org/uni-ns#has_email">
+        <rdfs:domain rdf:resource="http://www.mydomain.org/uni-ns#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema/Literal"/>
+    </rdf:Property>
+
+    <!-- has_age Property -->
+    <rdf:Property rdf:about="http://www.mydomain.org/uni-ns#has_age">
+        <rdfs:domain rdf:resource="http://www.mydomain.org/uni-ns#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema/Literal"/>
+    </rdf:Property>
+    
+    <!-- member_of Property -->
+    <rdf:Property rdf:about="http://www.mydomain.org/uni-ns#member_of">
+        <rdfs:domain rdf:resource="http://www.mydomain.org/uni-ns#Person"/>
+        <rdfs:range rdf:resource="http://www.mydomain.org/uni-ns#Department"/>
+    </rdf:Property>
+    
+    <!-- teaches Property -->
+    <rdf:Property rdf:about="http://www.mydomain.org/uni-ns#teaches">
+        <rdfs:domain rdf:resource="http://www.mydomain.org/uni-ns#Professor"/>
+        <rdfs:range rdf:resource="http://www.mydomain.org/uni-ns#Lesson"/>
+    </rdf:Property>
+    
+    <!-- les_name Property -->
+    <rdf:Property rdf:about="http://www.mydomain.org/uni-ns#les_name">
+        <rdfs:domain rdf:resource="http://www.mydomain.org/uni-ns#Lesson"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema/Literal"/>
+    </rdf:Property>
+    
+    <!-- taught_by Property -->
+    <rdf:Property rdf:about="http://www.mydomain.org/uni-ns#taught_by">
+        <rdfs:domain rdf:resource="http://www.mydomain.org/uni-ns#Lesson"/>
+        <rdfs:range rdf:resource="http://www.mydomain.org/uni-ns#Professor"/>
+    </rdf:Property>
+    
+    <!-- dep_name Property -->
+    <rdf:Property rdf:about="http://www.mydomain.org/uni-ns#dep_name">
+        <rdfs:domain rdf:resource="http://www.mydomain.org/uni-ns#Department"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema/Literal"/>
+    </rdf:Property>
+    
+    <!-- dep_city Property -->
+    <rdf:Property rdf:about="http://www.mydomain.org/uni-ns#dep_city">
+        <rdfs:domain rdf:resource="http://www.mydomain.org/uni-ns#Department"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema/Literal"/>
+    </rdf:Property>
+    
+    <!-- room_name Property -->
+    <rdf:Property rdf:about="http://www.mydomain.org/uni-ns#room_name">
+        <rdfs:domain rdf:resource="http://www.mydomain.org/uni-ns#Classroom"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema/Literal"/>
+    </rdf:Property>
+    
+    <!-- room_capacity Property -->
+    <rdf:Property rdf:about="http://www.mydomain.org/uni-ns#room_capacity">
+        <rdfs:domain rdf:resource="http://www.mydomain.org/uni-ns#Classroom"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema/Literal"/>
+    </rdf:Property>
+    
+    <!-- room_department Property -->
+    <rdf:Property rdf:about="http://www.mydomain.org/uni-ns#room_department">
+        <rdfs:domain rdf:resource="http://www.mydomain.org/uni-ns#Classroom"/>
+        <rdfs:range rdf:resource="http://www.mydomain.org/uni-ns#Department"/>
+    </rdf:Property> 
+
+
+
+
+    <!-- =================== INSTANCES ================== -->
+
+    <!-- DEPARTMENTS -->
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Department001">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Department"/>
+        <uni:dep_name>CEID</uni:dep_name>
+        <uni:dep_city>Patras</uni:dep_city>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Department002">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Department"/>
+        <uni:dep_name>Mathematics Department</uni:dep_name>
+        <uni:dep_city>Patras</uni:dep_city>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Department003">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Department"/>
+        <uni:dep_name>Electrical Engineering</uni:dep_name>
+        <uni:dep_city>Patras</uni:dep_city>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Department004">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Department"/>
+        <uni:dep_name>Agriculture</uni:dep_name>
+        <uni:dep_city>Messologi</uni:dep_city>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Department005">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Department"/>
+        <uni:dep_name>Food Science</uni:dep_name>
+        <uni:dep_city>Messologi</uni:dep_city>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Department006">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Department"/>
+        <uni:dep_name>Fisheries</uni:dep_name>
+        <uni:dep_city>Agrinio</uni:dep_city>
+    </rdf:Description>
+
+    <!-- PROFESSORS -->
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Professor001">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Professor"/>
+        <uni:has_name>Makris Christos</uni:has_name>
+        <uni:has_phone>2610996968</uni:has_phone>
+        <uni:has_email>makri@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>50</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+        <uni:teaches uni:resource="http://www.mydomain.org/uni-ns#Lesson001"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Professor002">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Professor"/>
+        <uni:has_name>Nikolos Dimitris</uni:has_name>
+        <uni:has_phone>2610996929</uni:has_phone>
+        <uni:has_email>nikolosd@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>50</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+        <uni:teaches uni:resource="http://www.mydomain.org/uni-ns#Lesson002"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Professor003">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Professor"/>
+        <uni:has_name>Haris Vergos</uni:has_name>
+        <uni:has_phone>2610996924</uni:has_phone>
+        <uni:has_email>vergos@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>50</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+        <uni:teaches uni:resource="http://www.mydomain.org/uni-ns#Lesson003"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Professor004">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Professor"/>
+        <uni:has_name>Kyriakos Vlachos</uni:has_name>
+        <uni:has_phone>2610996990</uni:has_phone>
+        <uni:has_email>kvlachos@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>50</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+        <uni:teaches uni:resource="http://www.mydomain.org/uni-ns#Lesson004"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Professor005">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Professor"/>
+        <uni:has_name>Efstratios Galopoulos</uni:has_name>
+        <uni:has_phone>2610996911</uni:has_phone>
+        <uni:has_email>stratis@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>50</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+        <uni:teaches uni:resource="http://www.mydomain.org/uni-ns#Lesson005"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Professor006">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Professor"/>
+        <uni:has_name>Ioannis Garofalakis</uni:has_name>
+        <uni:has_phone>2610996909</uni:has_phone>
+        <uni:has_email>garofala@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>50</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+        <uni:teaches uni:resource="http://www.mydomain.org/uni-ns#Lesson007"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Professor007">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Professor"/>
+        <uni:has_name>Christos Zaroliagis</uni:has_name>
+        <uni:has_phone>2610996912</uni:has_phone>
+        <uni:has_email>zaro@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>50</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+        <uni:teaches uni:resource="http://www.mydomain.org/uni-ns#Lesson008"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Professor008">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Professor"/>
+        <uni:has_name>Andreas Komninos</uni:has_name>
+        <uni:has_phone>2610996915</uni:has_phone>
+        <uni:has_email>akomninos@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>50</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+        <uni:teaches uni:resource="http://www.mydomain.org/uni-ns#Lesson007"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Professor009">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Professor"/>
+        <uni:has_name>Stavros Kosmadakis</uni:has_name>
+        <uni:has_phone>2610997505</uni:has_phone>
+        <uni:has_email>scosmada@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>50</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+        <uni:teaches uni:resource="http://www.mydomain.org/uni-ns#Lesson009"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Professor010">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Professor"/>
+        <uni:has_name>Konstantinos Mpermperidis</uni:has_name>
+        <uni:has_phone>2610996975</uni:has_phone>
+        <uni:has_email>berberid@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>50</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+        <uni:teaches uni:resource="http://www.mydomain.org/uni-ns#Lesson010"/>
+    </rdf:Description>
+
+    <!-- STUDENTS -->
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Student001">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Student"/>
+        <uni:has_name>Student One</uni:has_name>
+        <uni:has_phone>2610900001</uni:has_phone>
+        <uni:has_email>student01@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>20</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Student002">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Student"/>
+        <uni:has_name>Student Two</uni:has_name>
+        <uni:has_phone>2610900002</uni:has_phone>
+        <uni:has_email>student02@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>21</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Student003">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Student"/>
+        <uni:has_name>Student Three</uni:has_name>
+        <uni:has_phone>2610900003</uni:has_phone>
+        <uni:has_email>student03@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>19</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Student004">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Student"/>
+        <uni:has_name>Student Four</uni:has_name>
+        <uni:has_phone>2610900004</uni:has_phone>
+        <uni:has_email>student04@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>19</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Student005">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Student"/>
+        <uni:has_name>Student Five</uni:has_name>
+        <uni:has_phone>2610900005</uni:has_phone>
+        <uni:has_email>student05@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>20</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Student006">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Student"/>
+        <uni:has_name>Student Six</uni:has_name>
+        <uni:has_phone>2610900006</uni:has_phone>
+        <uni:has_email>student06@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>24</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Student007">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Student"/>
+        <uni:has_name>Student Seven</uni:has_name>
+        <uni:has_phone>2610900007</uni:has_phone>
+        <uni:has_email>student07@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>20</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Student008">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Student"/>
+        <uni:has_name>Student Eight</uni:has_name>
+        <uni:has_phone>2610900008</uni:has_phone>
+        <uni:has_email>student08@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>22</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Student009">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Student"/>
+        <uni:has_name>Student Nine</uni:has_name>
+        <uni:has_phone>2610900009</uni:has_phone>
+        <uni:has_email>student09@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>29</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Student010">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Student"/>
+        <uni:has_name>Student Ten</uni:has_name>
+        <uni:has_phone>2610900010</uni:has_phone>
+        <uni:has_email>student10@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>19</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Student011">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Student"/>
+        <uni:has_name>Student Eleven</uni:has_name>
+        <uni:has_phone>2610900011</uni:has_phone>
+        <uni:has_email>student11@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>20</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Student012">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Student"/>
+        <uni:has_name>Student Twelve</uni:has_name>
+        <uni:has_phone>2610900012</uni:has_phone>
+        <uni:has_email>student12@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>18</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Student013">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Student"/>
+        <uni:has_name>Student Thirteen</uni:has_name>
+        <uni:has_phone>2610900013</uni:has_phone>
+        <uni:has_email>student13@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>18</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Student014">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Student"/>
+        <uni:has_name>Student Fourteen</uni:has_name>
+        <uni:has_phone>2610900014</uni:has_phone>
+        <uni:has_email>student14@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>25</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Student015">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Student"/>
+        <uni:has_name>Student Fiveteen</uni:has_name>
+        <uni:has_phone>2610900015</uni:has_phone>
+        <uni:has_email>student15@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>24</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Student016">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Student"/>
+        <uni:has_name>Student Sixteen</uni:has_name>
+        <uni:has_phone>2610900016</uni:has_phone>
+        <uni:has_email>student16@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>25</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Student017">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Student"/>
+        <uni:has_name>Student Seventeen</uni:has_name>
+        <uni:has_phone>2610900017</uni:has_phone>
+        <uni:has_email>student17@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>20</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Student018">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Student"/>
+        <uni:has_name>Student Eighteen</uni:has_name>
+        <uni:has_phone>2610900018</uni:has_phone>
+        <uni:has_email>student18@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>22</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Student019">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Student"/>
+        <uni:has_name>Student Nineteen</uni:has_name>
+        <uni:has_phone>2610900019</uni:has_phone>
+        <uni:has_email>student19@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>28</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Student020">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Student"/>
+        <uni:has_name>Student Twenty</uni:has_name>
+        <uni:has_phone>2610900020</uni:has_phone>
+        <uni:has_email>student20@ceid.upatras.gr</uni:has_email>
+        <uni:has_age>18</uni:has_age>
+        <uni:member_of uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+
+    <!-- LESSONS -->
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Lesson001">
+        <uni:les_name>Data Theory</uni:les_name>
+        <uni:taught_by uni:resource="http://www.mydomain.org/uni-ns#Professor001"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Lesson002">
+        <uni:les_name>Hardware</uni:les_name>
+        <uni:taught_by uni:resource="http://www.mydomain.org/uni-ns#Professor002"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Lesson003">
+    <uni:les_name>Logic Design</uni:les_name>
+        <uni:taught_by uni:resource="http://www.mydomain.org/uni-ns#Professor003"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Lesson004">
+        <uni:les_name>Electronics</uni:les_name>
+        <uni:taught_by uni:resource="http://www.mydomain.org/uni-ns#Professor004"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Lesson005">
+        <uni:les_name>Linear Algebra</uni:les_name>
+        <uni:taught_by uni:resource="http://www.mydomain.org/uni-ns#Professor005"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Lesson007">
+        <uni:les_name>Web</uni:les_name>
+        <uni:taught_by uni:resource="http://www.mydomain.org/uni-ns#Professor006"/>
+        <uni:taught_by uni:resource="http://www.mydomain.org/uni-ns#Professor008"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Lesson008">
+        <uni:les_name>Algorithms</uni:les_name>
+        <uni:taught_by uni:resource="http://www.mydomain.org/uni-ns#Professor007"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Lesson009">
+        <uni:les_name>Graphs</uni:les_name>
+        <uni:taught_by uni:resource="http://www.mydomain.org/uni-ns#Professor009"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Lesson010">
+        <uni:les_name>Digital Communications</uni:les_name>
+        <uni:taught_by uni:resource="http://www.mydomain.org/uni-ns#Professor010"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Lesson011">
+        <uni:les_name>Discrete Mathematics</uni:les_name>
+        <uni:taught_by>Papaioannou Evi</uni:taught_by>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Lesson012">
+        <uni:les_name>Programming</uni:les_name>
+        <uni:taught_by>Spyros Sioutas</uni:taught_by>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Lesson013">
+        <uni:les_name>Electric Circuits</uni:les_name>
+        <uni:taught_by>Christos Christidis</uni:taught_by>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Lesson014">
+        <uni:les_name>Probability</uni:les_name>
+        <uni:taught_by>Sotiris Nikolitseas</uni:taught_by>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Lesson015">
+        <uni:les_name>Artificial Intelligence</uni:les_name>
+        <uni:taught_by>Vasilis Megalooikonomou</uni:taught_by>
+    </rdf:Description>
+
+
+    <!-- CLASSROOMS -->
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Classroom001">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Classroom"/>
+        <uni:room_name>G</uni:room_name>
+        <uni:room_capacity>200</uni:room_capacity>
+        <uni:room_department uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Classroom002">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Classroom"/>
+        <uni:room_name>BA</uni:room_name>
+        <uni:room_capacity>200</uni:room_capacity>
+        <uni:room_department uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Classroom003">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Classroom"/>
+        <uni:room_name>D1</uni:room_name>
+        <uni:room_capacity>100</uni:room_capacity>
+        <uni:room_department uni:resource="http://www.mydomain.org/uni-ns#Department001"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Classroom004">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Classroom"/>
+        <uni:room_name>Math1</uni:room_name>
+        <uni:room_capacity>100</uni:room_capacity>
+        <uni:room_department uni:resource="http://www.mydomain.org/uni-ns#Department002"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Classroom005">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Classroom"/>
+        <uni:room_name>Math2</uni:room_name>
+        <uni:room_capacity>100</uni:room_capacity>
+        <uni:room_department uni:resource="http://www.mydomain.org/uni-ns#Department002"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Classroom006">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Classroom"/>
+        <uni:room_name>Math3</uni:room_name>
+        <uni:room_capacity>100</uni:room_capacity>
+        <uni:room_department uni:resource="http://www.mydomain.org/uni-ns#Department002"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Classroom007">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Classroom"/>
+        <uni:room_name>Electrical1</uni:room_name>
+        <uni:room_capacity>100</uni:room_capacity>
+        <uni:room_department uni:resource="http://www.mydomain.org/uni-ns#Department003"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Classroom008">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Classroom"/>
+        <uni:room_name>Electrical2</uni:room_name>
+        <uni:room_capacity>100</uni:room_capacity>
+        <uni:room_department uni:resource="http://www.mydomain.org/uni-ns#Department003"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Classroom009">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Classroom"/>
+        <uni:room_name>Electrical3</uni:room_name>
+        <uni:room_capacity>100</uni:room_capacity>
+        <uni:room_department uni:resource="http://www.mydomain.org/uni-ns#Department003"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Classroom010">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Classroom"/>
+        <uni:room_name>Agri1</uni:room_name>
+        <uni:room_capacity>100</uni:room_capacity>
+        <uni:room_department uni:resource="http://www.mydomain.org/uni-ns#Department004"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Classroom011">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Classroom"/>
+        <uni:room_name>Agri2</uni:room_name>
+        <uni:room_capacity>100</uni:room_capacity>
+        <uni:room_department uni:resource="http://www.mydomain.org/uni-ns#Department004"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Classroom012">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Classroom"/>
+        <uni:room_name>Agri3</uni:room_name>
+        <uni:room_capacity>100</uni:room_capacity>
+        <uni:room_department uni:resource="http://www.mydomain.org/uni-ns#Department004"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Classroom013">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Classroom"/>
+        <uni:room_name>Food1</uni:room_name>
+        <uni:room_capacity>100</uni:room_capacity>
+        <uni:room_department uni:resource="http://www.mydomain.org/uni-ns#Department005"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Classroom014">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Classroom"/>
+        <uni:room_name>Food2</uni:room_name>
+        <uni:room_capacity>100</uni:room_capacity>
+        <uni:room_department uni:resource="http://www.mydomain.org/uni-ns#Department005"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Classroom015">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Classroom"/>
+        <uni:room_name>Food3</uni:room_name>
+        <uni:room_capacity>100</uni:room_capacity>
+        <uni:room_department uni:resource="http://www.mydomain.org/uni-ns#Department005"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Classroom016">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Classroom"/>
+        <uni:room_name>Fish1</uni:room_name>
+        <uni:room_capacity>100</uni:room_capacity>
+        <uni:room_department uni:resource="http://www.mydomain.org/uni-ns#Department006"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Classroom017">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Classroom"/>
+        <uni:room_name>Fish2</uni:room_name>
+        <uni:room_capacity>100</uni:room_capacity>
+        <uni:room_department uni:resource="http://www.mydomain.org/uni-ns#Department006"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns#Classroom018">
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns#Classroom"/>
+        <uni:room_name>Fish3</uni:room_name>
+        <uni:room_capacity>100</uni:room_capacity>
+        <uni:room_department uni:resource="http://www.mydomain.org/uni-ns#Department006"/>
+    </rdf:Description>
+
+</rdf:RDF>
