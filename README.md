@@ -10,7 +10,6 @@ The assignments and project involve:
 - Reasoning & Inference: Applying HermiT Reasoner to infer new relationships.
 - XML & XSD Validation: Structuring and validating academic schedules.
 - XPath & XSLT: Querying and transforming XML data.
-- Application Development: Implementing a Java-based system using Jena API for ontology interaction.
 
 
 ## 📑 Report PDFs
@@ -20,10 +19,6 @@ The assignments and project involve:
 
 
 ## 💻 Technologies Used
-List the key technologies and tools used in the project.
-
-- `Python / Java / C++ / etc.`
-- `HermiT Reasoner, Jena API`
+- `OWL / RDF / RDFS / SPARQL`
 - `XSD / Xpath / XSLT`
 - `XML / XML Schema`
-
