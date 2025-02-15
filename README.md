@@ -5,11 +5,11 @@
 ## 📜 About
 The assignments and project involve:
 
-- Ontology Modeling: Defining university-related entities (students, faculty, courses) using OWL, RDF, and RDFS.
-- SPARQL Queries: Extracting structured information from ontologies.
-- Reasoning & Inference: Applying HermiT Reasoner to infer new relationships.
-- XML & XSD Validation: Structuring and validating academic schedules.
-- XPath & XSLT: Querying and transforming XML data.
+- **Ontology Modeling**: Defining university-related entities (students, faculty, courses) using OWL, RDF, and RDFS.
+- **SPARQL Queries**: Extracting structured information from ontologies.
+- **Reasoning & Inference**: Applying HermiT Reasoner to infer new relationships.
+- **XML & XSD Validation**: Structuring and validating academic schedules.
+- **XPath & XSLT**: Querying and transforming XML data.
 
 
 ## 📑 Report PDFs
